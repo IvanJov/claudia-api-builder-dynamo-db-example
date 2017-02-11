@@ -21,5 +21,8 @@
   "dependencies": {
     "aws-sdk": "^2.12.0",
     "claudia-api-builder": "^2.4.0"
+  },
+  "devDependencies": {
+    "claudia": "^2.6.0"
   }
 }
