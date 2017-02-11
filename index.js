@@ -39,7 +39,7 @@ api.get('/book/{id}', function (request) {
     });
 });
 
-// Delete user with {id}
+// Delete book with {id}
 api.delete('/user/{id}', function (request) {
   'use strict';
   var params = {
