@@ -1,0 +1,23 @@
+{
+  "name": "claudia-api-builder-dynamo-db-example",
+  "version": "1.0.0",
+  "description": "Example code for an article on http://ivanjov.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanJov/claudia-api-builder-dynamo-db-example.git"
+  },
+  "author": "Ivan Jovanovic <ivanjov96@gmail.com> (http://github.com/ivanjov)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IvanJov/claudia-api-builder-dynamo-db-example/issues"
+  },
+  "homepage": "https://github.com/IvanJov/claudia-api-builder-dynamo-db-example#readme",
+  "dependencies": {
+    "aws-sdk": "^2.12.0",
+    "claudia-api-builder": "^2.4.0"
+  }
+}
