@@ -4,7 +4,9 @@
   "description": "Example code for an article on http://ivanjov.com/",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create": "claudia create --region us-east-1 --api-module index --policies policies --configure-db",
+    "deploy": "claudia update",
+    "reconfigure": "claudia update --configure-db"
   },
   "repository": {
     "type": "git",
