@@ -55,7 +55,7 @@ api.delete('/book/{id}', function (request) {
 
   return dynamoDb.delete(params).promise()
     .then(function () {
-      return 'Deleted book with id "' + id + '"';
+      return 'Deleted book with id "' + id;
     });
 }, {success: { contentType: 'text/plain'}});
 
