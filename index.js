@@ -8,17 +8,21 @@ module.exports = api;
 // Add new book
 api.post('/book', function (request) {
   'use strict';
+  var id = request.body.bookId;
   var params = {
     TableName: request.env.tableName,
     Item: {
-      bookId: request.body.bookId,
+      bookId: id,
       name: request.body.name,
       author: request.body.author,
       genre: request.body.genre
     }
   };
 
-  return dynamoDb.put(params).promise();
+  return dynamoDb.put(params).promise()
+    .then(function () {
+      return 'Created book with id ' + id;
+    });
 }, { success: 201 });
 
 // Get book for {id}
@@ -28,7 +32,7 @@ api.get('/book/{id}', function (request) {
   var params = {
     TableName: request.env.tableName,
     Key: {
-      bookId: request.pathParams.id
+      bookId: parseInt(request.pathParams.id)
     }
   };
 
@@ -41,10 +45,11 @@ api.get('/book/{id}', function (request) {
 // Delete book with {id}
 api.delete('/book/{id}', function (request) {
   'use strict';
+  var id = parseInt(request.pathParams.id);
   var params = {
     TableName: request.env.tableName,
     Key: {
-      bookId: request.pathParams.id
+      bookId: id
     }
   };
 
