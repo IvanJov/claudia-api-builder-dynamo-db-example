@@ -40,7 +40,7 @@ api.get('/book/{id}', function (request) {
 });
 
 // Delete book with {id}
-api.delete('/user/{id}', function (request) {
+api.delete('/book/{id}', function (request) {
   'use strict';
   var params = {
     TableName: request.env.tableName,
