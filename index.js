@@ -1,4 +1,3 @@
-/*global require, module*/
 var ApiBuilder = require('claudia-api-builder'),
   AWS = require('aws-sdk'),
   api = new ApiBuilder(),
